@@ -21,7 +21,7 @@ public class Produto {
 	
 	@NotNull(message = "O atributo nome do produto é Obrigatório")
 	@Size(min = 5, max = 100)
-	private String nome_produto;
+	private String nomeproduto;
 	
 	@NotNull(message = "O atributo valor é Obrigatório")
 	private double valor;
@@ -56,12 +56,12 @@ public class Produto {
 		this.id = id;
 	}
 
-	public String getNome_produto() {
-		return nome_produto;
+	public String getNomeproduto() {
+		return nomeproduto;
 	}
 
-	public void setNome_produto(String nome_produto) {
-		this.nome_produto = nome_produto;
+	public void setNomeproduto(String nomeproduto) {
+		this.nomeproduto = nomeproduto;
 	}
 
 	public double getValor() {
@@ -111,5 +111,15 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+	
 
 }
