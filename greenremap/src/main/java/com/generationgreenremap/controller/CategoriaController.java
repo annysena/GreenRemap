@@ -45,25 +45,23 @@ public class CategoriaController {
 		return ResponseEntity.ok(categoriaRepository.findAllByPalavrachaveContainingIgnoreCase(palavrachave));
 
 	}
-	
-	
+
 	@GetMapping("/nomecategoria/{nomecategoria}")
 	public ResponseEntity<List<Categoria>> getByNomeCategoria(@PathVariable String nomecategoria) {
-		return ResponseEntity.ok(categoriaRepository.findAllByPalavrachaveContainingIgnoreCase(nomecategoria));
+		return ResponseEntity.ok(categoriaRepository.findAllByNomecategoriaContainingIgnoreCase(nomecategoria));
 
 	}
-	
-	
+
 	@PostMapping
 	public ResponseEntity<Categoria> postCategoria(@RequestBody Categoria categoria) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(categoriaRepository.save(categoria));
 	}
-	
+
 	@PutMapping
 	public ResponseEntity<Categoria> putCategoria(@RequestBody Categoria categoria) {
 		return ResponseEntity.status(HttpStatus.OK).body(categoriaRepository.save(categoria));
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public void deleteCategoria(@PathVariable long id) {
 		categoriaRepository.deleteById(id);
