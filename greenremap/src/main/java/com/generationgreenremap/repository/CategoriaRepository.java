@@ -8,6 +8,8 @@ import com.generationgreenremap.model.Categoria;
 
 public interface CategoriaRepository extends JpaRepository <Categoria, Long> {
 	
-	public List<Categoria> findAllByPalavrachaveContainingIgnoreCase (String palavraChave);
+	public List<Categoria> findAllByPalavrachaveContainingIgnoreCase (String palavrachave);
+	
+	public List<Categoria> findAllByNomecategoriaContainingIgnoreCase (String nomecategoria);
 
 }
