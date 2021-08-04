@@ -31,7 +31,7 @@ public class Usuario {
 	private String email;
 	
 	@NotNull(message = "O atributo Senha é Obrigatório!")
-	@Size(min = 8, max = 700)
+	@Size(min = 8)
 	private String senha;
 	
 	@NotNull(message = "O atributo Endereço é Obrigatório!")
